@@ -47,11 +47,14 @@
 				</div>
 		
 				<div class="right , col-12 col-sm-8">
-					<h1 style="padding-top: 20px">參數設定-圖書類別</h1><br>
-					<p style="font-size:15px">類別 : 
-						<input style="font-size:15px" type="text" name="class_text">
-						<input style="font-size:15px"type="submit" value="查詢">
-						<a href="a3_1"><input style="font-size:15px;margin-left: 40px" type="submit" value="新增"></a></p>
+					<h1 style="padding-top: 20px">新增/編輯帳號</h1><br>
+					<p style="font-size:15px"> 人名 : <input type="text" name="name_text"> </p>
+					<p style="font-size:15px"> 帳號 : <input type="text" name="account_text"> </p>
+					<p style="font-size:15px"> 密碼 : <input type="password" name="pd1"></p>
+					<p style="font-size:15px"> 狀態 : <input type="radio" name="rad1">有效 <input type="radio" name="rad1">無效 </p>
+					<p style="font-size:15px">黑名單狀態 : <input type="checkbox" name="ch1"></p> 
+					<p style="padding-left: 50px;font-size:15px"><input type="submit" name="sbu1" value="確定">
+					   <input type="submit" name="sbu2" value="返回"></p>
 				</div>
 			</div>
 		</div>

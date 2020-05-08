@@ -30,6 +30,8 @@
 		p {
 			font-size:30px;
 		}
+
+
 	</style>
 	<body>
 
@@ -46,12 +48,18 @@
 					<p><a href="a8">借閱紀錄</a></p>
 				</div>
 		
-				<div class="right , col-12 col-sm-8">
-					<h1 style="padding-top: 20px">參數設定-圖書類別</h1><br>
-					<p style="font-size:15px">類別 : 
-						<input style="font-size:15px" type="text" name="class_text">
-						<input style="font-size:15px"type="submit" value="查詢">
-						<a href="a3_1"><input style="font-size:15px;margin-left: 40px" type="submit" value="新增"></a></p>
+				<div class="right , col-12 col-sm-8" >
+					<h1 style="padding-top: 20px">新增/編輯參數-出版社</h1><br>
+						<p style="font-size:15px">公司名　 : <input type="text" name="com_text"></p>
+						<p style="font-size:15px">公司地址 : <input type="text" name="com_add"></p>
+						<p style="font-size:15px">公司電話 : <input type="text" name="com_tel"></p>
+						<p style="font-size:15px">聯絡人　 : <input type="text" name="com_name"></p>
+						<p style="font-size:15px">聯絡電話 : <input type="text" name="com_tel2"></p>
+						<p style="font-size:15px">狀態  : <input type="radio" name="com_ra1">有效
+						<input type="radio" name="com_ra1">無效<br></p>
+
+						<input type="submit" value="確定" style="margin-left: 165px;font-size:15px">
+					<a style="font-size:15px" href="a2"><input type="submit" value="返回"></a>
 				</div>
 			</div>
 		</div>
@@ -60,4 +68,4 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 	</body>
-</head>			
+</head>

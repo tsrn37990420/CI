@@ -22,8 +22,9 @@
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+$config['base_url'] = 'http://localhost/CodeIgniter/';
 
+//$config['base_url'] = ' ';
 /*
 |--------------------------------------------------------------------------
 | Index File

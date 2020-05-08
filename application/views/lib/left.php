@@ -47,7 +47,7 @@
 				</div>
 		
 				<div class="right , col-12 col-sm-8">
-					<p>9999999999</p>
+					<p>1</p>
 				</div>
 			</div>
 		</div>

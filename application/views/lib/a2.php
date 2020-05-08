@@ -46,8 +46,11 @@
 					<p><a href="a8">借閱紀錄</a></p>
 				</div>
 		
-				<div class="right , col-12 col-sm-8">
-					<p>2</p>
+				<div class="right , col-12 col-sm-8" >
+					<h1 style="padding-top: 20px">出版社</h1><br>
+					<p style="font-size: 15px">公司名 : <input type="text" name="com_text">
+					<input type="submit" value="查詢">
+					<a href="a2_2"><input type="submit" value="新增" style="margin-left: 150px"></p></a>
 				</div>
 			</div>
 		</div>

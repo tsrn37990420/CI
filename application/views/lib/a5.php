@@ -7,6 +7,9 @@
 				alert("hello");
 			});
 		});
+		$(document).ready(function(){
+			$("#test").
+		$this->load->database();
 	</script>
 
 	<style type="text/css">
@@ -30,6 +33,7 @@
 		p {
 			font-size:30px;
 		}
+
 	</style>
 	<body>
 
@@ -46,8 +50,65 @@
 					<p><a href="a8">借閱紀錄</a></p>
 				</div>
 		
-				<div class="right , col-12 col-sm-8">
-					<p>5</p>
+				<div class="right , col-12 col-sm-8 , table-respinsive">
+					<p style="font-size:15px;padding-top: 20px" >
+					   人名 : <input type="text" name="tx1">
+					   帳號 : <input type="text" name="ac1">
+					   <input type="radio" name="rad1">黑名單
+
+					   <a href="a5_1"><input style="margin-left: 35px" type="submit" name="bt1" value="新增帳號">
+						</a>
+						<p><?php echo $data2[2]; ?></p>
+					</p>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>編號</th>
+								<th>人名</th>
+								<th>帳號</th>
+								<th>密碼</th>
+								<th>狀態</th>
+								<th>黑單狀態</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+<!-- 							<tr id="test">
+								<td><?php echo $data2[i][0]; ?></td>
+								<td><?php echo $data2[i][0]; ?></td>
+								<td><?php echo $data2[i][0]; ?></td>
+								<td><?php echo $data2[i][0]; ?></td>
+								<td><?php echo $data2[i][0]; ?></td>
+								<td><?php echo $data2[i][0]; ?></td>
+							</tr> -->
+							<tr>
+								
+								<td><?php echo $data2[0][0]; ?></td>
+								<td><?php echo $data2[1][0]; ?></td>
+								<td><?php echo $data2[2][0]; ?></td>
+								<td><?php echo $data2[3][0]; ?></td>
+								<td><?php echo $data2[4][0]; ?></td>
+								<td><?php echo $data2[5][0]; ?></td>
+								
+							</tr>
+							<tr>
+								<td><?php echo $data2[0][1]; ?></td>
+								<td><?php echo $data2[1][1]; ?></td>
+								<td><?php echo $data2[2][1]; ?></td>
+								<td><?php echo $data2[3][1]; ?></td>
+								<td><?php echo $data2[4][1]; ?></td>
+								<td><?php echo $data2[5][1]; ?></td>
+							</tr>
+							<tr>
+								<td><?php echo $data2[0][2]; ?></td>
+								<td><?php echo $data2[1][2]; ?></td>
+								<td><?php echo $data2[2][2]; ?></td>
+								<td><?php echo $data2[3][2]; ?></td>
+								<td><?php echo $data2[4][2]; ?></td>
+								<td><?php echo $data2[5][2]; ?></td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>

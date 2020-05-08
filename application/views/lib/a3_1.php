@@ -47,11 +47,12 @@
 				</div>
 		
 				<div class="right , col-12 col-sm-8">
-					<h1 style="padding-top: 20px">參數設定-圖書類別</h1><br>
-					<p style="font-size:15px">類別 : 
-						<input style="font-size:15px" type="text" name="class_text">
-						<input style="font-size:15px"type="submit" value="查詢">
-						<a href="a3_1"><input style="font-size:15px;margin-left: 40px" type="submit" value="新增"></a></p>
+					<h1 style="padding-top: 20px">新增/編輯參數-圖書類別</h1><br>
+					<p style="font-size:15px">類別名 : <input type="text" name="insert_clss_name"></p>
+					<p style="font-size:15px">狀態 : <input type="radio" name="insert_calss_status">有效
+						<input type="radio" name="insert_calss_status">無效</p>
+					<p style="font-size:15px"><input type="submit" value="確定">
+					<a href="a3"><input type="submit" value="返回"></a></p>
 				</div>
 			</div>
 		</div>
