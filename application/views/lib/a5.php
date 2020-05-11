@@ -73,40 +73,22 @@
 							</tr>
 						</thead>
 						<tbody>
-<!-- 							<tr id="test">
-								<td><?php echo $data2[i][0]; ?></td>
-								<td><?php echo $data2[i][0]; ?></td>
-								<td><?php echo $data2[i][0]; ?></td>
-								<td><?php echo $data2[i][0]; ?></td>
-								<td><?php echo $data2[i][0]; ?></td>
-								<td><?php echo $data2[i][0]; ?></td>
-							</tr> -->
+							
+							<?php for($i=0;$i<4;$i++) { ?>
+
 							<tr>
 								
-								<td><?php echo $data2[0][0]; ?></td>
-								<td><?php echo $data2[1][0]; ?></td>
-								<td><?php echo $data2[2][0]; ?></td>
-								<td><?php echo $data2[3][0]; ?></td>
-								<td><?php echo $data2[4][0]; ?></td>
-								<td><?php echo $data2[5][0]; ?></td>
+								<td><?php echo $data2[0][$i]; ?></td>
+								<td><?php echo $data2[1][$i]; ?></td>
+								<td><?php echo $data2[2][$i]; ?></td>
+								<td><?php echo $data2[3][$i]; ?></td>
+								<td><?php echo $data2[4][$i]; ?></td>
+								<td><?php echo $data2[5][$i]; ?></td>
 								
 							</tr>
-							<tr>
-								<td><?php echo $data2[0][1]; ?></td>
-								<td><?php echo $data2[1][1]; ?></td>
-								<td><?php echo $data2[2][1]; ?></td>
-								<td><?php echo $data2[3][1]; ?></td>
-								<td><?php echo $data2[4][1]; ?></td>
-								<td><?php echo $data2[5][1]; ?></td>
-							</tr>
-							<tr>
-								<td><?php echo $data2[0][2]; ?></td>
-								<td><?php echo $data2[1][2]; ?></td>
-								<td><?php echo $data2[2][2]; ?></td>
-								<td><?php echo $data2[3][2]; ?></td>
-								<td><?php echo $data2[4][2]; ?></td>
-								<td><?php echo $data2[5][2]; ?></td>
-							</tr>
+							<?php } ?>
+
+						
 						</tbody>
 					</table>
 				</div>

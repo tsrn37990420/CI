@@ -8,13 +8,17 @@
 
 		$(document).ready(function(){
 			$("#btHello").click(function(){
-				var c = $("#fullname").val();
+				var fullname_val = $("#fullname").val();
+				alert(fullname_val);
 				$.ajax({
 					type:'POST',
-					data:{fullname:fullname},
-					url:'<?php echo site_url('lib/test/');?>'+fullname,
-					success:function(result){
-						$('#result1').html(result);
+					data:{'fullname1':fullname_val},
+					url:'<?php echo site_url('lib/test');?>',
+
+					success: function(re){
+						//$('#result1').html(re);
+						alert(re);
+						//alert(result);
 					}
 				});
 			});
@@ -24,5 +28,6 @@
 <body>
 	Name <input type="text" id="fullname">
 	<input id = "btHello" type="submit" value="確認">
+	<span id="result1"></span>
 </body>
 </html>

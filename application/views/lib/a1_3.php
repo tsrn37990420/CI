@@ -49,7 +49,7 @@
 				</div>
 		
 				<div class="right , col-12 col-sm-8" style="padding-top: 35px">
-					<form method="post" action="a1_3" enctype="multipart/form-data">
+					<form method="post" action="a9" enctype="multipart/form-data">
 						<label>書名 : </label> <input type="text" name="book_name">
 						<label>出版社 : </label> <select id = select_1 name = "publishing">
 							<option>無</option SELECTED >
@@ -78,13 +78,8 @@
 							</thead>
 							<tbody>
 								<tr>
-								
-									<!-- <td><?php echo $book[0][0]; ?></td>
-									<td><?php echo $book[1][0]; ?></td>
-									<td><?php echo $book[2][0]; ?></td>
-									<td><?php echo $book[3][0]; ?></td>
-									<td><?php echo $book[4][0]; ?></td> -->
-									
+								<td><?php echo $select[0];?></td>
+			
 								</tr>
 							</tbody>
 						</table>

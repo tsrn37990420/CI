@@ -2,13 +2,6 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function(){
-			$("#A1").click(function(){
-	
-			});
-		});
-
-
 	</script>
 
 	<style type="text/css">
@@ -48,46 +41,8 @@
 					<p><a href="a8">借閱紀錄</a></p>
 				</div>
 		
-				<div class="right , col-12 col-sm-8" style="padding-top: 35px">
-					<form method="post" action="a1_3" enctype="multipart/form-data">
-						<label>書名 : </label> <input type="text" name="book_name">
-						<label>出版社 : </label> <select id = select_1 name = "publishing">
-							<option>無</option SELECTED >
-							<option>格林</option>
-							<option>太陽</option>
-							<option>月亮</option></select>
-						<label>類別 : </label> <select id = select_2 name="book_class" >
-							<option>無</option SELECTED>
-							<option>恐怖</option>
-							<option>童話</option>
-							<option>愛情</option></select>
-						<input type="submit" value="查詢" id = "bt2">
-						
-					</form><a href = "a1_1"><input type="submit" value="新增" id = "bt1"></a>
-					<br>
-						<table class="table">
-							<thead>
-								<tr>
-									<th>編號</th>
-									<th>書名</th>
-									<th>出版社</th>
-									<th>出版日</th>
-									<th>類別</th>
-									<th>操作</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-								
-									<!-- <td><?php echo $book[0][0]; ?></td>
-									<td><?php echo $book[1][0]; ?></td>
-									<td><?php echo $book[2][0]; ?></td>
-									<td><?php echo $book[3][0]; ?></td>
-									<td><?php echo $book[4][0]; ?></td> -->
-									
-								</tr>
-							</tbody>
-						</table>
+				<div class="right , col-12 col-sm-8">
+					<h1>新增成功!</h1>
 				</div>
 			</div>
 		</div>
