@@ -3,23 +3,23 @@
 <head>
 		
 	<title></title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
 	<script type="text/javascript">
 
 		$(document).ready(function(){
 			$("#btHello").click(function(){
 				var fullname_val = $("#fullname").val();
-				alert(fullname_val);
+				//alert(fullname_val);
 				$.ajax({
 					type:'POST',
-					data:{'fullname1':fullname_val},
-					url:'<?php echo site_url('lib/test');?>',
+					data:{fullname_val:$("#fullname").val()},
+					dataType: "json",
+					url:'<?=site_url('lib/test')?>',
 
-					success: function(re){
-						//$('#result1').html(re);
-						alert(re);
+					success: function(ac){
+					 $('#result1').html(ac);
 						//alert(result);
-					}
+					 }
 				});
 			});
 		});
@@ -28,6 +28,7 @@
 <body>
 	Name <input type="text" id="fullname">
 	<input id = "btHello" type="submit" value="確認">
+	<p id = test></p>
 	<span id="result1"></span>
 </body>
 </html>

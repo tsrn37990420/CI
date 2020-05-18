@@ -1,12 +1,14 @@
 <head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script>
+	<!-- <script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$("#A1").click(function(){
-				alert("hello");
-			});
+			var data = window.location.href.split("?")[1].split("=")[1];
+			alert("id: " + data);
 		});
+
 	</script>
 
 	<style type="text/css">
@@ -32,7 +34,6 @@
 		}
 	</style>
 	<body>
-
 		<div class="container-fluid">
 			<div class="row">
 				<div class="left1 , col-12 col-sm-4">
@@ -47,14 +48,16 @@
 				</div>
 		
 				<div class="right , col-12 col-sm-8">
+					<form method="post" action="a5_2" >
 					<h1 style="padding-top: 20px">新增/編輯帳號</h1><br>
 					<p style="font-size:15px"> 人名 : <input type="text" name="name_text"> </p>
 					<p style="font-size:15px"> 帳號 : <input type="text" name="account_text"> </p>
 					<p style="font-size:15px"> 密碼 : <input type="password" name="pd1"></p>
-					<p style="font-size:15px"> 狀態 : <input type="radio" name="rad1">有效 <input type="radio" name="rad1">無效 </p>
+					<p style="font-size:15px"> 狀態 : <input type="radio" name="rad1" checked>有效 <input type="radio" name="rad1">無效 </p>
 					<p style="font-size:15px">黑名單狀態 : <input type="checkbox" name="ch1"></p> 
 					<p style="padding-left: 50px;font-size:15px"><input type="submit" name="sbu1" value="確定">
-					   <input type="submit" name="sbu2" value="返回"></p>
+					   </form>
+					<a href="a5" style="font-size:15px" ><input type="submit" name="sbu2" value="返回"></a>
 				</div>
 			</div>
 		</div>

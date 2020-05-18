@@ -3,8 +3,8 @@
 	<script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$("#A1").click(function(){
-				alert("hello");
+			$("#bt1").click(function(){
+				alert("新增成功");
 			});
 		});
 	</script>
@@ -47,12 +47,13 @@
 				</div>
 		
 				<div class="right , col-12 col-sm-8">
+					<form method="post" action="a3_2" enctype= "multipart/form-data">	
 					<h1 style="padding-top: 20px">新增/編輯參數-圖書類別</h1><br>
-					<p style="font-size:15px">類別名 : <input type="text" name="insert_clss_name"></p>
-					<p style="font-size:15px">狀態 : <input type="radio" name="insert_calss_status">有效
+					<p style="font-size:15px">類別名 : <input type="text" name="insert_class_name"></p>
+					<p style="font-size:15px">狀態 : <input type="radio" name="insert_class_status">有效
 						<input type="radio" name="insert_calss_status">無效</p>
-					<p style="font-size:15px"><input type="submit" value="確定">
-					<a href="a3"><input type="submit" value="返回"></a></p>
+					<p style="font-size:15px"><input type="submit" value="確定" class="bt1">
+					<a href="a3"><input type="submit" value="返回"></a></p></form>
 				</div>
 			</div>
 		</div>

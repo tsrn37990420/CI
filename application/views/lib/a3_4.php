@@ -2,11 +2,6 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function(){
-			$("#A1").click(function(){
-				alert("hello");
-			});
-		});
 	</script>
 
 	<style type="text/css">
@@ -30,8 +25,6 @@
 		p {
 			font-size:30px;
 		}
-
-
 	</style>
 	<body>
 
@@ -48,19 +41,30 @@
 					<p><a href="a8">借閱紀錄</a></p>
 				</div>
 		
-				<div class="right , col-12 col-sm-8" >
-					<h1 style="padding-top: 20px">新增/編輯參數-出版社</h1><br>
-					<form method="post" action="a2_3" enctype="multipart/form-data">
-						<p style="font-size:15px">公司名　 : <input type="text" name="com_text"></p>
-						<p style="font-size:15px">公司地址 : <input type="text" name="com_add"></p>
-						<p style="font-size:15px">公司電話 : <input type="text" name="com_tel"></p>
-						<p style="font-size:15px">聯絡人　 : <input type="text" name="com_namep"></p>
-						<p style="font-size:15px">聯絡電話 : <input type="text" name="com_tel_2"></p>
-						<p style="font-size:15px">狀態  : <input type="radio" name="com_ra1" value="有效">有效
-						<input type="radio" name="com_ra1" value="無效">無效<br></p>
+				<div class="right , col-12 col-sm-8">
 
-						<input type="submit" value="確定" style="margin-left: 165px;font-size:15px">
-					</form><a style="font-size:15px;padding-left: 165px" href="a2"><input type="submit" value="返回"></a>
+					<h1 style="padding-top: 20px">查詢結果</h1><br>
+
+						
+						<a href="a3"><input style="font-size:15px;margin-left: 40px;float: right;" type="submit" value="返回"></a></p>
+
+						<table class="table">
+							<thead>
+								<tr>
+									<th>編號</th>
+									<th>類別</th>
+									<th>狀態</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php for($i=0;$i<count($book_class[0]);$i++) { ?>
+									<tr>
+										<td><?php echo $book_class[0][$i]; ?></td>
+										<td><?php echo $book_class[1][$i]; ?></td>
+										<td><?php echo $book_class[2][$i]; ?></td>
+									</tr>
+								<?php } ?>
+							</tbody>
 				</div>
 			</div>
 		</div>
@@ -69,4 +73,4 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 	</body>
-</head>
+</head>			

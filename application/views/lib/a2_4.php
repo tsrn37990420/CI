@@ -2,11 +2,11 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function(){
+		/*$(document).ready(function(){
 			$("#A1").click(function(){
 				alert("hello");
 			});
-		});
+		});*/
 	</script>
 
 	<style type="text/css">
@@ -30,8 +30,6 @@
 		p {
 			font-size:30px;
 		}
-
-
 	</style>
 	<body>
 
@@ -49,18 +47,37 @@
 				</div>
 		
 				<div class="right , col-12 col-sm-8" >
-					<h1 style="padding-top: 20px">新增/編輯參數-出版社</h1><br>
-					<form method="post" action="a2_3" enctype="multipart/form-data">
-						<p style="font-size:15px">公司名　 : <input type="text" name="com_text"></p>
-						<p style="font-size:15px">公司地址 : <input type="text" name="com_add"></p>
-						<p style="font-size:15px">公司電話 : <input type="text" name="com_tel"></p>
-						<p style="font-size:15px">聯絡人　 : <input type="text" name="com_namep"></p>
-						<p style="font-size:15px">聯絡電話 : <input type="text" name="com_tel_2"></p>
-						<p style="font-size:15px">狀態  : <input type="radio" name="com_ra1" value="有效">有效
-						<input type="radio" name="com_ra1" value="無效">無效<br></p>
+					<h1 style="padding-top: 20px">出版社</h1><br>
+					<p style="font-size: 15px">公司名 : <input type="text" name="com_text">
+					<input type="submit" value="查詢">
+					<a href="a2_2"><input type="submit" value="新增" style="margin-left: 150px"></p></a>
 
-						<input type="submit" value="確定" style="margin-left: 165px;font-size:15px">
-					</form><a style="font-size:15px;padding-left: 165px" href="a2"><input type="submit" value="返回"></a>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>編號</th>
+								<th>公司名</th>
+								<th>公司地址</th>
+								<th>公司電話</th>
+								<th>聯絡人</th>
+								<th>聯絡人電話</th>
+								<th>狀態</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php for($i=0;$i<count($where_name[0]);$i++) { ?>
+
+							<tr>
+								<td><?php echo $where_name[0][$i]; ?></td>
+								<td><?php echo $where_name[1][$i]; ?></td>
+								<td><?php echo $where_name[2][$i]; ?></td>
+								<td><?php echo $where_name[3][$i]; ?></td>
+								<td><?php echo $where_name[4][$i]; ?></td>
+							</tr>
+							<?php } ?>
+
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>

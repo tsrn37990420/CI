@@ -2,13 +2,11 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function(){
-			$("#A1").click(function(){
+		// $(document).ready(function(){
+		// 	$("#A1").click(function(){
 	
-			});
-		});
-
-
+		// 	});
+		// });
 	</script>
 
 	<style type="text/css">
@@ -28,7 +26,6 @@
 			text-align: center;
 			margin-top: 60px; 
 		}
-
 		p {
 			font-size:30px;
 		}
@@ -49,7 +46,7 @@
 				</div>
 		
 				<div class="right , col-12 col-sm-8" style="padding-top: 35px">
-					<form method="post" action="a9" enctype="multipart/form-data">
+					<form method="post" action="a1" enctype="multipart/form-data">
 						<label>書名 : </label> <input type="text" name="book_name">
 						<label>出版社 : </label> <select id = select_1 name = "publishing">
 							<option>無</option SELECTED >
@@ -62,7 +59,7 @@
 							<option>童話</option>
 							<option>愛情</option></select>
 						<input type="submit" value="查詢" id = "bt2">
-						
+						<button>返回</button>
 					</form><a href = "a1_1"><input type="submit" value="新增" id = "bt1"></a>
 					<br>
 						<table class="table">
@@ -77,10 +74,15 @@
 								</tr>
 							</thead>
 							<tbody>
+								<?php for($i=0;$i<count($select[0]);$i++) { ?>
 								<tr>
-								<td><?php echo $select[0];?></td>
-			
+									<td><?php echo $select[0][$i]; ?></td>
+									<td><?php echo $select[1][$i]; ?></td>
+									<td><?php echo $select[2][$i]; ?></td>
+									<td><?php echo $select[3][$i]; ?></td>
+									<td><?php echo $select[4][$i]; ?></td>
 								</tr>
+								<?php } ?>
 							</tbody>
 						</table>
 				</div>

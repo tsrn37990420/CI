@@ -2,11 +2,6 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function(){
-			$("#A1").click(function(){
-				alert("hello");
-			});
-		});
 	</script>
 
 	<style type="text/css">
@@ -47,11 +42,32 @@
 				</div>
 		
 				<div class="right , col-12 col-sm-8">
+					<form method="post" action="a3_4" enctype= "multipart/form-data" >
 					<h1 style="padding-top: 20px">參數設定-圖書類別</h1><br>
 					<p style="font-size:15px">類別 : 
 						<input style="font-size:15px" type="text" name="class_text">
-						<input style="font-size:15px"type="submit" value="查詢">
-						<a href="a3_1"><input style="font-size:15px;margin-left: 40px" type="submit" value="新增"></a></p>
+						<input style="font-size:15px"type="submit" value="查詢"></form>
+						<a href="a3_1"><input style="font-size:15px;margin-left: 40px;float: right;" type="submit" value="新增"></a></p>
+						<table class="table">
+							<thead>
+								<tr>
+									<th>編號</th>
+									<th>類別</th>
+									<th>狀態</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php for($i=0;$i<count($select[0]);$i++) { ?>
+									<tr>
+										<td><?php echo $select[0][$i]; ?></td>
+										<td><?php echo $select[1][$i]; ?></td>
+										<td><?php echo $select[2][$i]; ?></td>
+										<td><a href="a3_3" name="1" >編輯/作廢</a></td>
+									</tr>
+								<?php } ?>
+							</tbody>
+						</table>
 				</div>
 			</div>
 		</div>

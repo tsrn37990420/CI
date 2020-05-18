@@ -2,11 +2,6 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function(){
-			$("#A1").click(function(){
-				alert("hello");
-			});
-		});
 	</script>
 
 	<style type="text/css">
@@ -47,7 +42,32 @@
 				</div>
 		
 				<div class="right , col-12 col-sm-8">
-					<p>6</p>
+					<h1 style="padding-top: 25px;padding-bottom: 25px">圖書庫</h1>
+					<table class="table">
+							<thead>
+								<tr>
+									<th>編號</th>
+									<th>書名</th>
+									<th>出版社</th>
+									<th>出版日</th>
+									<th>類別</th>
+									<th>借閱狀態</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php for($i=0;$i<count($book[0]);$i++) { ?>
+									<tr>
+										<td><?php echo $book[0][$i]; ?></td>
+										<td><?php echo $book[1][$i]; ?></td>
+										<td><?php echo $book[2][$i]; ?></td>
+										<td><?php echo $book[3][$i]; ?></td>
+										<td><?php echo $book[4][$i]; ?></td>
+										<td><a href="#">可借閱</a></td> 
+									</tr>
+								<?php } ?>
+							</tbody>
+						</table>
+					<p></p>
 				</div>
 			</div>
 		</div>

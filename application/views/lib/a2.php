@@ -2,11 +2,11 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function(){
+		/*$(document).ready(function(){
 			$("#A1").click(function(){
 				alert("hello");
 			});
-		});
+		});*/
 	</script>
 
 	<style type="text/css">
@@ -47,10 +47,44 @@
 				</div>
 		
 				<div class="right , col-12 col-sm-8" >
-					<h1 style="padding-top: 20px">出版社</h1><br>
-					<p style="font-size: 15px">公司名 : <input type="text" name="com_text">
-					<input type="submit" value="查詢">
-					<a href="a2_2"><input type="submit" value="新增" style="margin-left: 150px"></p></a>
+					<form method="post" action="a2_4" enctype="multipart/form-data">
+						<h1 style="padding-top: 20px">出版社</h1><br>
+						<p style="font-size: 15px">公司名 : <input type="text" name="com_text">
+						<input type="submit" value="查詢">
+					</form>
+					<a href="a2_2"><input type="submit" value="新增" style="margin-left: 150px;float: right;"></a>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>編號</th>
+								<th>公司名</th>
+								<th>公司地址</th>
+								<th>公司電話</th>
+								<th>聯絡人</th>
+								<th>聯絡人電話</th>
+								<th>狀態</th>
+							</tr>
+						</thead>
+						<tbody>
+							
+							<?php for($i=0;$i<count($publishing[0]);$i++) { ?>
+
+							<tr>
+								
+								<td><?php echo $publishing[0][$i]; ?></td>
+								<td><?php echo $publishing[1][$i]; ?></td>
+								<td><?php echo $publishing[2][$i]; ?></td>
+								<td><?php echo $publishing[3][$i]; ?></td>
+								<td><?php echo $publishing[4][$i]; ?></td>
+								<td><?php echo $publishing[5][$i]; ?></td>
+								<td><?php echo $publishing[6][$i]; ?></td>
+								
+							</tr>
+							<?php } ?>
+
+						
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>

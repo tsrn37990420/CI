@@ -43,6 +43,7 @@
 		
 				<div class="right , col-12 col-sm-8">
 					<h1>新增成功!</h1>
+					<form method="post" action="a1"><button>返回</button></form>
 				</div>
 			</div>
 		</div>

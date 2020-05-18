@@ -30,8 +30,6 @@
 		p {
 			font-size:30px;
 		}
-
-
 	</style>
 	<body>
 
@@ -48,19 +46,9 @@
 					<p><a href="a8">借閱紀錄</a></p>
 				</div>
 		
-				<div class="right , col-12 col-sm-8" >
-					<h1 style="padding-top: 20px">新增/編輯參數-出版社</h1><br>
-					<form method="post" action="a2_3" enctype="multipart/form-data">
-						<p style="font-size:15px">公司名　 : <input type="text" name="com_text"></p>
-						<p style="font-size:15px">公司地址 : <input type="text" name="com_add"></p>
-						<p style="font-size:15px">公司電話 : <input type="text" name="com_tel"></p>
-						<p style="font-size:15px">聯絡人　 : <input type="text" name="com_namep"></p>
-						<p style="font-size:15px">聯絡電話 : <input type="text" name="com_tel_2"></p>
-						<p style="font-size:15px">狀態  : <input type="radio" name="com_ra1" value="有效">有效
-						<input type="radio" name="com_ra1" value="無效">無效<br></p>
-
-						<input type="submit" value="確定" style="margin-left: 165px;font-size:15px">
-					</form><a style="font-size:15px;padding-left: 165px" href="a2"><input type="submit" value="返回"></a>
+				<div class="right , col-12 col-sm-8">
+					<h1>新增成功 !</h1>
+					<a href="a5" style="font-size:15px" ><input type="submit" name="sbu2" value="返回"></a>
 				</div>
 			</div>
 		</div>
@@ -69,4 +57,4 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 	</body>
-</head>
+</head>			

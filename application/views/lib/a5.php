@@ -1,17 +1,9 @@
 <head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$("#A1").click(function(){
-				alert("hello");
-			});
-		});
-		$(document).ready(function(){
-			$("#test").
-		$this->load->database();
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript " >
 	</script>
-
+	<jsp:forward page="a5_1.php"/>
 	<style type="text/css">
 		.left1{
 			background: gray;
@@ -58,7 +50,6 @@
 
 					   <a href="a5_1"><input style="margin-left: 35px" type="submit" name="bt1" value="新增帳號">
 						</a>
-						<p><?php echo $data2[2]; ?></p>
 					</p>
 					<table class="table">
 						<thead>
@@ -74,21 +65,18 @@
 						</thead>
 						<tbody>
 							
-							<?php for($i=0;$i<4;$i++) { ?>
+							<?php for($i=0;$i<count($data2[0]);$i++) { ?>
 
 							<tr>
-								
-								<td><?php echo $data2[0][$i]; ?></td>
-								<td><?php echo $data2[1][$i]; ?></td>
-								<td><?php echo $data2[2][$i]; ?></td>
-								<td><?php echo $data2[3][$i]; ?></td>
-								<td><?php echo $data2[4][$i]; ?></td>
-								<td><?php echo $data2[5][$i]; ?></td>
-								
+								<td><?=$data2[0][$i]; ?></td>
+								<td><?=$data2[1][$i]; ?></td>
+								<td><?=$data2[2][$i]; ?></td>
+								<td><?=$data2[3][$i]; ?></td>
+								<td><?=$data2[4][$i]; ?></td>
+								<td><?=$data2[5][$i]; ?></td>
+								<td><a href="a5_1?id=<?php echo $data2[0][$i]?>"><?php echo "操作/作廢" ?></a></td>
 							</tr>
 							<?php } ?>
-
-						
 						</tbody>
 					</table>
 				</div>
