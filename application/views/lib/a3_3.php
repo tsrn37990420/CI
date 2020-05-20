@@ -48,7 +48,7 @@
 					<p style="font-size:15px">狀態 : <input type="radio" name="insert_class_status">有效
 						<input type="radio" name="insert_calss_status">無效</p>
 					<p style="font-size:15px"><input type="submit" value="確定" class="bt1">
-					<a href="a3"><input type="submit" value="返回"></a></p></form>
+					</form><a href="http://localhost/CodeIgniter/index.php/lib/a3"><input type="submit" value="返回"></a></p>
 				</div>
 			</div>
 		</div>

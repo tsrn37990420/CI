@@ -42,12 +42,12 @@
 				</div>
 		
 				<div class="right , col-12 col-sm-8">
-					<form method="post" action="a7_1" enctype= "multipart/form-data" >
+					<form method="post" action="a7_3" enctype= "multipart/form-data" >
 					<h1 style="padding-top: 20px">黑名單列表</h1><br>
-					<p style="font-size:15px">人名 : 
+					<p style="font-size:15px">帳號 : 
 						<input style="font-size:15px" type="text" name="class_text">
 						<input style="font-size:15px"type="submit" value="查詢"></form>
-						<a href="a7_1"><input style="font-size:15px;margin-left: 40px;float: right;" type="submit" value="新增"></a></p>
+						<a href="a7_1/zero"><input style="font-size:15px;margin-left: 40px;float: right;" type="submit" value="新增"></a></p>
 					<table class="table">
 							<thead>
 								<tr>
@@ -67,7 +67,7 @@
 										<td><?php echo $black_p[2][$i]; ?></td>
 										<td><?php echo $black_p[3][$i]; ?></td>
 										<td><?php echo $black_p[4][$i]; ?></td>
-										<td><a href="#">編輯/作廢</a></td>
+										<td><a href="a7_1/<?=$black_p[0][$i]?>">編輯/作廢</a></td>
 									</tr>
 								<?php } ?>
 							</tbody>

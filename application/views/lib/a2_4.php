@@ -48,10 +48,10 @@
 		
 				<div class="right , col-12 col-sm-8" >
 					<h1 style="padding-top: 20px">出版社</h1><br>
-					<p style="font-size: 15px">公司名 : <input type="text" name="com_text">
-					<input type="submit" value="查詢">
-					<a href="a2_2"><input type="submit" value="新增" style="margin-left: 150px"></p></a>
-
+<!-- 					<p style="font-size: 15px">公司名 : <input type="text" name="com_text">
+					<input type="submit" value="查詢"> -->
+					<p><a href="a2"><input style="float: right;" type="submit" value="返回" ></a>
+					<a href="a2_2"><input style="float: right;" type="submit" value="新增"></p></a>
 					<table class="table">
 						<thead>
 							<tr>
@@ -65,7 +65,10 @@
 							</tr>
 						</thead>
 						<tbody>
-							<?php for($i=0;$i<count($where_name[0]);$i++) { ?>
+							<?php if($where_name=="no_data")
+								echo " 查無資料"; 
+							else{
+							for($i=0;$i<count($where_name[0]);$i++) { ?>
 
 							<tr>
 								<td><?php echo $where_name[0][$i]; ?></td>
@@ -74,6 +77,7 @@
 								<td><?php echo $where_name[3][$i]; ?></td>
 								<td><?php echo $where_name[4][$i]; ?></td>
 							</tr>
+							<?php } ?>
 							<?php } ?>
 
 						</tbody>

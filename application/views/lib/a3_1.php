@@ -37,23 +37,25 @@
 			<div class="row">
 				<div class="left1 , col-12 col-sm-4">
 					<p id = "A1"> <a href="a1">圖書館藏書</a></p>
-					<p><a href="a2">書版社資料</a></p>
-					<p><a href="a3">圖書類別</a></p>
-					<p><a href="a4">系統設定</a></p>
-					<p><a href="a5">帳號查詢</a></p>
-					<p><a href="a6">藏書庫</a></p>
-					<p><a href="a7">黑名單</a></p>
-					<p><a href="a8">借閱紀錄</a></p>
+					<p><a href="http://localhost/CodeIgniter/index.php/lib/a2">書版社資料</a></p>
+					<p><a href="http://localhost/CodeIgniter/index.php/lib/a3">圖書類別</a></p>
+					<p><a href="http://localhost/CodeIgniter/index.php/lib/a4">系統設定</a></p>
+					<p><a href="http://localhost/CodeIgniter/index.php/lib/a5">帳號查詢</a></p>
+					<p><a href="http://localhost/CodeIgniter/index.php/lib/a6">藏書庫</a></p>
+					<p><a href="http://localhost/CodeIgniter/index.php/lib/a7">黑名單</a></p>
+					<p><a href="http://localhost/CodeIgniter/index.php/lib/a8">借閱紀錄</a></p>
 				</div>
 		
 				<div class="right , col-12 col-sm-8">
-					<form method="post" action="a3_2" enctype= "multipart/form-data">	
+					<form method="post" action="http://localhost/CodeIgniter/index.php/lib/a3_2" enctype= "multipart/form-data">
+					<input style="display:none" type="text" name="account5" value="<?php echo $id; ?>" id = only_id>
 					<h1 style="padding-top: 20px">新增/編輯參數-圖書類別</h1><br>
 					<p style="font-size:15px">類別名 : <input type="text" name="insert_class_name"></p>
-					<p style="font-size:15px">狀態 : <input type="radio" name="insert_class_status">有效
+					<p style="font-size:15px">狀態 : <input type="radio" name="insert_calss_status">有效
 						<input type="radio" name="insert_calss_status">無效</p>
 					<p style="font-size:15px"><input type="submit" value="確定" class="bt1">
-					<a href="a3"><input type="submit" value="返回"></a></p></form>
+					</form>
+					<a href="http://localhost/CodeIgniter/index.php/lib/a3"><input type="submit" value="返回"></a></p>
 				</div>
 			</div>
 		</div>

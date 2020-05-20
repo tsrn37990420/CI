@@ -1,34 +1,38 @@
-
-<head>
 	<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$("#bt1").click(function(){
-				// var account = $("#ac_text1").val();
-				// var password = $("#pw_text1").val();
-				// var abc_text = $("#abc").val();
-				// var password2 = $("#cpa_password").val();
-				// alert(password2)
+				var pd2 = $("#cpa_password").val();
+				if( pd2 == "<?=$word;?>"){
+					alert("k");
+				}
+				else
+					alert("n");
+					alert("<?=$word;?>");
 				$.ajax({
 					type: "POST",
 					url:'<?=site_url('lib/se')?>',
-					// dataType:"json",
 					data:{account:$("#ac_text1").val(),
-						  password:$("#pw_text1").val()},
+						  password:$("#pw_text1").val(),
+						  cpa_password:$("#cpa_password").val()},
+
 					success:function(data){	
-						if(data==null){
-							alert("5678");
-						}
-						else{
-						if (data=="nodata"){
-							alert("請輸入帳號密碼");
-						}
-						else{
-							alert("輸入錯誤");
-						}
-					}
+																	
+							if(data=="nodata"){
+								alert("請輸入帳號密碼");
+							}
+							else if(data=="zero"){
+								alert("帳號密碼錯誤");
+							}
+							else if (pd2 == "<?=$word;?>"){
+								alert(data+"歡迎!");
+								window.location.href="/CodeIgniter/index.php/lib/a1";
+							}
+							else{
+								alert("驗證碼錯誤");
+							}
 					 },
 					error:function(XMLHttpRequest, textStatus, errorThrown) {
   					alert(XMLHttpRequest.status);
@@ -64,26 +68,7 @@
 			font-size:30px;
 		}
 	</style>
-	<body>
-		<?php 
-			$this->load->helper('url');
-			$this->load->helper('string');
-			// $this->load->library('session');
-			$this->load->helper('captcha');
-			$vals = array(
-				'word' =>random_string("alpha",6), //生成隨機字母
-			    'img_path' => './captcha/',
-			    // 'img_url' => base_url().'captcha/',
-			    'img_url' => base_url('captcha')."/",
-			    'img_width' => '150',
-		        'img_height'    => 40,
-		        'expiration'    => 7200,
-		        'word_length'   => 6,
-		        'font_size'     => 50,
-		        'expiration' => 3
-					    );
-					$cap = create_captcha($vals);
-		?>		
+	<body>	
  			<div class="container-fluid">
 			<div class="row">
 				<div class="right , col-12 col-sm-12" style="padding-top: 25px">

@@ -3,10 +3,25 @@
 	<script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$("#A1").click(function(){
-	
+			$("#bt_out").click(function(){
+				$.ajax({
+					type: "POST",
+					url:'<?=site_url('lib/se2')?>',
+					data:{},
+					success:function(data2){
+						alert(data2);
+						window.location.href="/CodeIgniter/index.php/lib/first";
+					},
+					error:function(XMLHttpRequest, textStatus, errorThrown) {
+  					alert(XMLHttpRequest.status);
+					alert(XMLHttpRequest.readyState);
+					alert(textStatus);
+					}
+
+				});
 			});
-		});
+		});  
+
 
 
 	</script>
@@ -50,6 +65,8 @@
 		
 				<div class="right , col-12 col-sm-8" style="padding-top: 35px">
 					<form method="post" action="a1_3" enctype="multipart/form-data">
+						<p style="float: left;"><?=$s_data;?></p>
+						<input style="float: left;" type="button" value="登出" id=bt_out>
 						<label>書名 : </label> <input type="text" name="book_name">
 						<label>出版社 : </label> <select id = select_1 name = "publishing">
 							<option>無</option SELECTED >
@@ -63,7 +80,7 @@
 							<option>愛情</option></select>
 						<input type="submit" value="查詢" id = "bt2">					
 					</form>
-					<a href = "a1_1"><input type="submit" value="新增" id = "bt1"></a>
+					<a href = "a1_1/zero"><input type="submit" value="新增" id = "bt1"></a>
 					<br>
 						<table class="table">
 							<thead>
@@ -84,7 +101,7 @@
 										<td><?php echo $book[2][$i]; ?></td>
 										<td><?php echo $book[3][$i]; ?></td>
 										<td><?php echo $book[4][$i]; ?></td>
-										<td><a href="#">編輯/作廢</a></td> 
+										<td><a href="a1_1/<?=$book[0][$i]?>">編輯/作廢</a></td> 
 									</tr>
 								<?php } ?>
 							</tbody>
@@ -93,6 +110,7 @@
 			</div>
 		</div>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	</body>

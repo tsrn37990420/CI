@@ -1,4 +1,4 @@
-<head>
+					<head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript " >
@@ -44,11 +44,14 @@
 		
 				<div class="right , col-12 col-sm-8 , table-respinsive">
 					<p style="font-size:15px;padding-top: 20px" >
+					   <form method="post" action="a5_3">
 					   人名 : <input type="text" name="tx1">
 					   帳號 : <input type="text" name="ac1">
 					   <input type="radio" name="rad1">黑名單
 
-					   <a href="a5_1"><input style="margin-left: 35px" type="submit" name="bt1" value="新增帳號">
+					   <input type="submit" name="bt2" value="查詢">
+						</form>
+					   <a href="a5_1/zero"><input style="margin-left: 35px;float: right;" type="submit" name="bt1" value="新增帳號">
 						</a>
 					</p>
 					<table class="table">
@@ -74,7 +77,7 @@
 								<td><?=$data2[3][$i]; ?></td>
 								<td><?=$data2[4][$i]; ?></td>
 								<td><?=$data2[5][$i]; ?></td>
-								<td><a href="a5_1?id=<?php echo $data2[0][$i]?>"><?php echo "操作/作廢" ?></a></td>
+								<td><a href="a5_1/<?php echo $data2[0][$i]?>"><?php echo "操作/作廢" ?></a></td>
 							</tr>
 							<?php } ?>
 						</tbody>

@@ -31,22 +31,24 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="left1 , col-12 col-sm-4">
-					<p id = "A1"> <a href="a1">圖書館藏書</a></p>
-					<p><a href="a2">書版社資料</a></p>
-					<p><a href="a3">圖書類別</a></p>
-					<p><a href="a4">系統設定</a></p>
-					<p><a href="a5">帳號查詢</a></p>
-					<p><a href="a6">藏書庫</a></p>
-					<p><a href="a7">黑名單</a></p>
-					<p><a href="a8">借閱紀錄</a></p>
+					<p id = "A1"> <a href="http://localhost/CodeIgniter/index.php/lib/a1">圖書館藏書</a></p>
+					<p><a href="http://localhost/CodeIgniter/index.php/lib/a2">書版社資料</a></p>
+					<p><a href="http://localhost/CodeIgniter/index.php/lib/a3">圖書類別</a></p>
+					<p><a href="http://localhost/CodeIgniter/index.php/lib/a4">系統設定</a></p>
+					<p><a href="http://localhost/CodeIgniter/index.php/lib/a5">帳號查詢</a></p>
+					<p><a href="http://localhost/CodeIgniter/index.php/lib/a6">藏書庫</a></p>
+					<p><a href="http://localhost/CodeIgniter/index.php/lib/a7">黑名單</a></p>
+					<p><a href="http://localhost/CodeIgniter/index.php/lib/a8">借閱紀錄</a></p>
 				</div>
 		
 				<div class="right , col-12 col-sm-8">
-					<form method="post" action="a7_2" enctype= "multipart/form-data">
+					<form method="post" action="http://localhost/CodeIgniter/index.php/lib/a7_2" enctype= "multipart/form-data">
 					<h1 style="padding-top: 20px">黑名單列表</h1><br>
+					<input style="display:none" type="text" name="account5" value="<?php echo $id; ?>" id = only_id>
 					<p style="font-size:15px">黑單帳號 : <input type="text" name="black_account">
 						<input style="font-size:15px" type="radio" name="black_radio">黑單</p>
 					<p><input style="font-size:15px" type="submit" name="bt1" value="確認"></p></form>
+					<a href="http://localhost/CodeIgniter/index.php/lib/a7"><input style="font-size:15px" type="submit" name="bt2" value="返回"></p></a>
 				</div>
 			</div>
 		</div>

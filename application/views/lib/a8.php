@@ -47,7 +47,17 @@
 				</div>
 		
 				<div class="right , col-12 col-sm-8">
-					<p>8</p>
+					<h1>借閱紀錄</h1>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>編號</th>
+								<th>書名</th>
+								<th>借書人帳號</th>
+								<th>借書日期</th>
+								<th>歸還日期</th>
+							</tr>
+						</thead>
 				</div>
 			</div>
 		</div>

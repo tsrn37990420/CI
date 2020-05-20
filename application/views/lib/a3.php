@@ -47,7 +47,7 @@
 					<p style="font-size:15px">類別 : 
 						<input style="font-size:15px" type="text" name="class_text">
 						<input style="font-size:15px"type="submit" value="查詢"></form>
-						<a href="a3_1"><input style="font-size:15px;margin-left: 40px;float: right;" type="submit" value="新增"></a></p>
+						<a href="a3_1/zero"><input style="font-size:15px;margin-left: 40px;float: right;" type="submit" value="新增"></a></p>
 						<table class="table">
 							<thead>
 								<tr>
@@ -63,7 +63,7 @@
 										<td><?php echo $select[0][$i]; ?></td>
 										<td><?php echo $select[1][$i]; ?></td>
 										<td><?php echo $select[2][$i]; ?></td>
-										<td><a href="a3_3" name="1" >編輯/作廢</a></td>
+										<td><a href="a3_1/<?=$select[0][$i]?>">編輯/作廢</a></td> 
 									</tr>
 								<?php } ?>
 							</tbody>

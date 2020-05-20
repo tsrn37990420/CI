@@ -62,7 +62,7 @@
 										<td><?php echo $book[2][$i]; ?></td>
 										<td><?php echo $book[3][$i]; ?></td>
 										<td><?php echo $book[4][$i]; ?></td>
-										<td><a href="#">可借閱</a></td> 
+										<td><a href="a6_1/<?=$book[0][$i]?>"> <?if($book[5][$i]=='off') {echo "不可借閱";} else {echo "可借閱";}?> </a></td> 
 									</tr>
 								<?php } ?>
 							</tbody>

@@ -37,27 +37,28 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="left1 , col-12 col-sm-4">
-					<p id = "A1"> <a href="a1">圖書館藏書</a></p>
-					<p><a href="a2">書版社資料</a></p>
-					<p><a href="a3">圖書類別</a></p>
-					<p><a href="a4">系統設定</a></p>
-					<p><a href="a5">帳號查詢</a></p>
-					<p><a href="a6">藏書庫</a></p>
-					<p><a href="a7">黑名單</a></p>
-					<p><a href="a8">借閱紀錄</a></p>
+					<p id = "A1"> <a href="http://localhost/CodeIgniter/index.php/lib/a1">圖書館藏書</a></p>
+					<p><a href="http://localhost/CodeIgniter/index.php/lib/a2">書版社資料</a></p>
+					<p><a href="http://localhost/CodeIgniter/index.php/lib/a3">圖書類別</a></p>
+					<p><a href="http://localhost/CodeIgniter/index.php/lib/a4">系統設定</a></p>
+					<p><a href="http://localhost/CodeIgniter/index.php/lib/a5">帳號查詢</a></p>
+					<p><a href="http://localhost/CodeIgniter/index.php/lib/a6">藏書庫</a></p>
+					<p><a href="http://localhost/CodeIgniter/index.php/lib/a7">黑名單</a></p>
+					<p><a href="http://localhost/CodeIgniter/index.php/lib/a8">借閱紀錄</a></p>
 				</div>
 		
 				<div class="right , col-12 col-sm-8">
-					<form method="post" action="a5_2" >
+					<form method="post" action="http://localhost/CodeIgniter/index.php/lib/a5_2" >
 					<h1 style="padding-top: 20px">新增/編輯帳號</h1><br>
+					<input style="display:none" type="text" name="account5" value="<?php echo $id; ?>" id = only_id>
 					<p style="font-size:15px"> 人名 : <input type="text" name="name_text"> </p>
 					<p style="font-size:15px"> 帳號 : <input type="text" name="account_text"> </p>
 					<p style="font-size:15px"> 密碼 : <input type="password" name="pd1"></p>
 					<p style="font-size:15px"> 狀態 : <input type="radio" name="rad1" checked>有效 <input type="radio" name="rad1">無效 </p>
 					<p style="font-size:15px">黑名單狀態 : <input type="checkbox" name="ch1"></p> 
-					<p style="padding-left: 50px;font-size:15px"><input type="submit" name="sbu1" value="確定">
+					<p style="padding-left: 50px;font-size:15px"><input type="submit" name="sbu1" value="確定/修改">
 					   </form>
-					<a href="a5" style="font-size:15px" ><input type="submit" name="sbu2" value="返回"></a>
+					<a href="http://localhost/CodeIgniter/index.php/lib/a5" style="font-size:15px" ><input type="submit" name="sbu2" value="返回"></a>
 				</div>
 			</div>
 		</div>
